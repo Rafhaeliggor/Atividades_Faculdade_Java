@@ -1,15 +1,12 @@
-//Criando classe Poupançca
 package com.seubanco.model;
 public class ContaPoupanca extends Conta {
     private double taxaRendimento;
 
-    //Criando classe fiha de conta
     public ContaPoupanca(String titular, int numero, String agencia, double saldo, String tipo, double taxaRendimento) {
         super(titular, numero, agencia, saldo, tipo);
         this.taxaRendimento = taxaRendimento;
     }
 
-    //Métodos para Conta Poupançca
     public void render() {
         depositar(getSaldo() * taxaRendimento);
     }
@@ -22,7 +19,6 @@ public class ContaPoupanca extends Conta {
         this.taxaRendimento = taxaRendimento;
     }
 
-    //Sobreposição de atributos específicos da classe
     @Override
     public String toString() {
         return "ContaPoupanca{" +

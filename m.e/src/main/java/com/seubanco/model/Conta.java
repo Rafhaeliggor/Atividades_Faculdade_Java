@@ -1,15 +1,12 @@
-//Classe dedicada a atributos base de uma conta
 package com.seubanco.model;
 public abstract class Conta {
-    //definindo parâmetros da classe
     private String titular;
     private int numero;
     private String agencia;
     private double saldo;
     private String tipo;
 
-    //construtor da classe
-    public Conta(String titular, int numero, String agencia, double saldo, String tipo, String dataAbertura) {
+    public Conta(String titular, int numero, String agencia, double saldo, String tipo) {
         this.titular = titular;
         this.numero = numero;
         this.agencia = agencia;
@@ -17,7 +14,6 @@ public abstract class Conta {
         this.tipo = tipo;
     }
 
-    //metodos para manipular o valor na conta
     public void depositar(double valor) {
         saldo += valor;
     }
@@ -38,7 +34,6 @@ public abstract class Conta {
         return false;
     }
 
-    //Getters e Setterss da classe
     public String getTitular() {
         return titular;
     }
@@ -83,7 +78,6 @@ public abstract class Conta {
     ) {
         this.tipo = tipo;
     }
-    
 
     @Override
     public String toString() {
